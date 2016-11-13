@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title>AIMLDB - predicting movie revenue.</title>
+		<meta name="description" content="AIMLDB - predicting movie revenue using the IMDB5000 dataset and machine learning." />
+		<meta name="keywords" content="IMDB, estimation, prediction, machine learning, artificial intelligence, ai" />
+		<link rel="shortcut icon" href="favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="css/default.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+      <script src="dist/sweetalert.min.js"></script>
+      <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+		<script src="js/modernizr.custom.js"></script>
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	</head>
+	<body class="nl-blurred">
+		<div class="container demo-1">
+
+			<header>
+				<h1>AIMLDB <span>Movie revenue prediction using IMDB5000</span></h1>	
+			</header>
+			<div class="main clearfix">
+				<form id="nl-form" class="nl-form">
+					Predict the revenue of a  
+					<select id="genre">
+						  <option value="Drama" selected>Drama</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Thriller">Thriller</option>
+                        <option value="Action">Action</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Crime">Crime</option>
+                        <option value="Sci-Fi">Sci-Fi</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Horror">Horror</option>
+                        <option value="Family">Family</option>
+                        <option value="Mystery">Mystery</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Animation">Animation</option>
+                        <option value="Music">Music</option>
+                        <option value="War">War</option>
+                        <option value="History">History</option>
+                        <option value="Sport">Sport</option>
+                        <option value="Musical">Musical</option>
+                        <option value="Documentary">Documentary</option>
+                        <option value="Western">Western</option>
+                        <option value="Film-Noir">Film-Noir</option>
+                        <option value="Short">Short</option>
+                        <option value="News">News</option>
+                        <option value="Reality-TV">Reality-TV</option>
+                        <option value="Game-Show">Game-Show</option>
+					</select>
+					movie, starring 
+					<select id="actor-one">
+						<option value="Robert Downey Jr" selected>Robert Downey Jr</option>
+						<option value="Leonardo DiCaprio">Leonardo DiCaprio</option>
+						<option value="Jude Law">Jude Law</option>
+						<option value="Benedict Cumberbatch">Benedict Cumberbatch</option>
+						<option value="Remi Malek">Remi Malek</option>
+					</select>
+					, directed by 
+					<select id="director">
+						<option value="Danny Boyle" selected>Danny Boyle</option>
+					 	<option value="James Cameron">James Cameron</option>
+					 	<option value="Guy Ritchie">Guy Ritchie</option>
+					 	<option value="Ang Lee">Ang Lee</option>
+                  <option value="Martin Scorsese">Martin Scorsese</option>
+					</select>, with a budget of <input id="budget" type="text" value="3898983" placeholder="1000000"></input>.
+					<div class="nl-submit-wrap">
+						<div class="nl-submit" id="predict-revenue">Predict Revenue</div>
+					</div>
+					<div class="nl-overlay"></div>
+				</form>
+			</div>
+		</div><!-- /container -->
+		<script src="js/nlform.js"></script>
+        <script src="js/predict.js"></script>
+		<script>
+			var nlform = new NLForm( document.getElementById( 'nl-form' ) );
+		</script>
+	</body>
+</html>
